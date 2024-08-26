@@ -6,12 +6,12 @@ let op: number  = 0
 const n1 = parseInt(prompt('Digite o 1° numero: '))
 const n2 = parseInt(prompt('Digite o 2° numero: '))
 
+
 const calculaMediaNumeros = (n1: number, n2: number): void => {
     let temp = (n1 + n2) / 2
 
     console.log('A media dos valores é = ' + temp)
 }
-
 
 const diferecaMaiorParaMenor = (n1: number, n2: number): void =>{
     let temp
@@ -34,16 +34,6 @@ const produtoDosNumeros = (n1: number, n2: number): void =>{
     console.log(`O produto de ${n1} e ${n2} é ${temp}` )
 }
 
-const divisaoDoPrimeiroPeloSegundo = (n1: number, n2: number): void =>{
-    let temp: number = n1 / n2
-
-    if(n2 != 0){
-        console.log(`A divisão do primeiro numero ${n1} pelo segundo ${n2} = ${temp}`)
-    }else{
-        console.log('O segundo numero deve ser diferente de zero.')
-    }
-}
-
 console.log('##########################')
 console.log('Escolha uma Operação')
 console.log('##########################')
@@ -51,7 +41,6 @@ console.log('##########################')
 console.log('[1] Média entre os números digitados')
 console.log('[2] Diferença do maior pelo menor')
 console.log('[3] Produto entre os Números')
-console.log('[4] Divisão do primeiro pelo segundo')
 
 op = parseInt(prompt("Opção: "))
 
@@ -65,11 +54,7 @@ switch(op){
     case 3:
         produtoDosNumeros(n1, n2)
         break
-    case 4:
-        divisaoDoPrimeiroPeloSegundo(n1, n2)
-        break
     default:
         console.log('Opção invalida.')
         break
 }
-
